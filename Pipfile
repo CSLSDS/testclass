@@ -6,6 +6,12 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+pandas = "*"
+numpy = "*"
+scikit-learn = "*"
+scipy = "*"
+matplotlib = "*"
+category-encoders = "*"
 
 [requires]
 python_version = "3.7"
