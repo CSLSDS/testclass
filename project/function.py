@@ -70,6 +70,6 @@ def describe_other(df):
       'nulls' : df.isnull().sum(),
       'mode' : [f'{df[column].mode()[0]}' for column in df.columns]
   }
-  return pd.DataFrame(data)
+    return pd.DataFrame(data)
 
 
