@@ -16,21 +16,21 @@ class ease:
         self.train, self.val = train_test_split(self.df, test_size=.15)
         return self.train, self.test, self.val
 
-        def target_features(self, target):
+        def target_features(self, train, val, test, target):
         """
         target = target from the dataframe
         """
         self.target = target
-        self.features = self.train.columns.drop(target)
+        self.features = self.train.columns.drop(self.target)
 
-        self.x_train = self.train[self.features]
-        self.y_train = self.train[self.target]
+        self.x_train = self.train[features]
+        self.y_train = self.train[target]
 
-        self.x_val = self.val[self.features]
-        self.y_val = self.val[self.target]
+        self.x_val = self.val[features]
+        self.y_val = self.val[target]
 
-        self.x_test = self.test[self.features]
-        self.y_test = self.test[self.target]
+        self.x_test = self.test[features]
+        self.y_test = self.test[target]
 
         return self.x_train, self.y_train, self.x_val, self.y_val, self.x_test, self.y_test
 
